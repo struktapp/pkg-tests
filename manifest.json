@@ -1,0 +1,8 @@
+{
+	"package":"pkg-tests",
+	"files":[
+
+		"lib/App/Command/Tests/Exec.php",
+		"lib/App/Command/Tests/ListCmd.php"
+	]
+}
