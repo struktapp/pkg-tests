@@ -3,6 +3,7 @@
 	"files":[
 
 		"lib/App/Command/Tests/Exec.php",
-		"lib/App/Command/Tests/ListCmd.php"
+		"lib/App/Command/Tests/ListCmd.php",
+		"lib/App/Package/PkgTests.php"
 	]
 }
