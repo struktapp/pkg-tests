@@ -54,7 +54,8 @@ class Exec extends \Strukt\Console\Command{
 		}
 
 		$runner = new TestRunner();
-		$runner->doRun($suite);
+		// $runner->doRun($suite);
+		$runner->run($suite);
 			
 		// $out->add("Models generated successfully.");
 	}
