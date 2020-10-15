@@ -35,4 +35,9 @@ class PkgTests implements Pkg{
 
 		return null;
 	}
+
+	public function isInstalled(){
+
+		return class_exists(\App\Command\Tests\Exec::class);
+	}
 }
