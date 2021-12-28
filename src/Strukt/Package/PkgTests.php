@@ -30,8 +30,8 @@ class PkgTests implements Pkg{
 
 				"commands"=>array(
 
-					App\Command\Tests\Exec::class,
-					App\Command\Tests\ListCmd::class
+					\App\Command\Tests\Exec::class,
+					\App\Command\Tests\ListCmd::class
 				)
 			)
 		);
