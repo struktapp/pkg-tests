@@ -12,6 +12,7 @@ class PkgTests implements Pkg{
 
 		$this->manifest = array(
 
+			"cmd_name"=>"PhpUnit",
 			"package"=>"pkg-tests",
 			"files"=>array(
 
@@ -21,9 +22,31 @@ class PkgTests implements Pkg{
 		);
 	}
 
+	public function getSettings($type){
+
+		$settings = array(
+
+			"App:Cli"=>array(
+
+				"commands"=>array(
+
+					App\Command\Tests\Exec::class,
+					App\Command\Tests\ListCmd::class
+				)
+			)
+		);
+
+		return $settings[$type];
+	}
+
 	public function getName(){
 
 		return $this->manifest["package"];
+	}
+
+	public function getCmdName(){
+
+		return $this->manifest["cmd_name"];
 	}
 
 	public function getFiles(){
