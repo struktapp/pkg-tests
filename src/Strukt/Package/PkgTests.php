@@ -33,7 +33,8 @@ class PkgTests implements Pkg{
 					\App\Command\Tests\Exec::class,
 					\App\Command\Tests\ListCmd::class
 				)
-			)
+			),
+			"App:Idx"=>[]
 		);
 
 		return $settings[$type];
