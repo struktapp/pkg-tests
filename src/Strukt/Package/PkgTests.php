@@ -64,4 +64,9 @@ class PkgTests implements Pkg{
 
 		return class_exists(\App\Command\Tests\Exec::class);
 	}
+
+	public function getRequirements(){
+
+		return null;
+	}
 }
