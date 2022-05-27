@@ -34,5 +34,15 @@ PhpUnit
  test:ls           List Tests 
  test:run          Execute Tests
 ```
+## Package Development
 
+This package will require installation into your `app/src/{{AppName}}` folder.
+The `publish:package` command takes argument `package` if you inicate key `package` in 
+your `cfg/repo.php` file for value `Strukt\Package\PkgTests::class`. Since your source 
+will be in the root folder in a subfolder called `package` it will allow the publisher 
+to install files in the your app source folder `app/src`.
+
+```sh
+./console publish:package package
+```
 Have a good one!
