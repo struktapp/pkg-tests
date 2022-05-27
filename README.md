@@ -1,6 +1,12 @@
 Strukt Tests
 ===
 
+### Installation
+
+```sh
+composer require strukt/pkg-tests:v1.0.1
+```
+
 ## Getting Started
 
 Project `strukt/pkg-tests` is a `strukt` module.
