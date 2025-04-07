@@ -16,15 +16,15 @@ Project `strukt/pkg-tests` is a `strukt` module.
 Install and publish `strukt/pkg-tests`:
 
 ```sh
-console generate:app nameofyourapp
+./xcli make:app <app_name>
 composer require strukt/pkg-tests
-console publish:package pkg-tests
+./xcli publish:package pkg-tests
 ```
 
 There is a list of console commands for preparing your authentication.
 
 ```sh
-$ ./console -l
+$ ./xcli -l
 
 Strukt Console
 ==============
@@ -43,6 +43,6 @@ will be in the root folder in a subfolder called `package` it will allow the pub
 to install files in the your app source folder `app/src`.
 
 ```sh
-./console publish:package package
+./xcli publish:package package
 ```
 Have a good one!

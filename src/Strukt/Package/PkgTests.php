@@ -2,11 +2,13 @@
 
 namespace Strukt\Package;
 
-use Strukt\Contract\Package as Pkg;
-
-class PkgTests implements Pkg{
+/**
+* @author Moderator <pitsolu@gmail.com>
+*/
+class PkgTests implements \Strukt\Framework\Contract\Package{
 
 	private $manifest;
+
 
 	public function __construct(){
 
@@ -22,7 +24,20 @@ class PkgTests implements Pkg{
 		);
 	}
 
-	public function getSettings($type){
+	/**
+	 * @return void
+	 */
+	public function preInstall():void{
+		
+		//
+	}
+
+	/**
+	 * @param string $type
+	 * 
+	 * @return array
+	 */
+	public function getSettings(string $type):array{
 
 		$settings = array(
 
@@ -40,33 +55,61 @@ class PkgTests implements Pkg{
 		return $settings[$type];
 	}
 
-	public function getName(){
+	/**
+	 * @return string
+	 */
+	public function getName():string{
 
 		return $this->manifest["package"];
 	}
 
-	public function getCmdName(){
+	/**
+	 * @return string
+	 */
+	public function getCmdName():string{
 
 		return $this->manifest["cmd_name"];
 	}
 
-	public function getFiles(){
+	/**
+	 * @return array|null
+	 */
+	public function getFiles():array|null{
 
 		return $this->manifest["files"];
 	}
 
-	public function getModules(){
+	/**
+	 * @return array|null
+	 */
+	public function getModules():array|null{
 
 		return null;
 	}
 
-	public function isPublished(){
+	/**
+	* Use php's class_exists function to identify a class that indicated your package is installed
+	* 
+	* @return bool
+	*/
+	public function isPublished():bool{
 
 		return class_exists(\App\Command\Tests\Exec::class);
 	}
 
-	public function getRequirements(){
-
+	/**
+	 * @return array|null
+	 */
+	public function getRequirements():array|null{
+		
 		return null;
+	}
+
+	/**
+	 * @return void
+	 */
+	public function postInstall():void{
+
+		//
 	}
 }
